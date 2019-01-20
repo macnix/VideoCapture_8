@@ -34,10 +34,8 @@ public class Snapshot extends  javax.swing.JFrame{
     ///
     CascadeClassifier faceDetector = new CascadeClassifier();
 
-
-
     MatOfRect faceDetections = new MatOfRect();
-    /////////////////////////////////////////////////////////////////////
+    //////////
     class DaemonThread implements Runnable
     {
         protected volatile boolean runnable = false;
@@ -89,8 +87,7 @@ public class Snapshot extends  javax.swing.JFrame{
             }
         }
     }
-    /////////////////////////////////////////////////////////
-
+    //////////
     public static String extract(String jarFilePath){
 
         if(jarFilePath == null)
@@ -143,7 +140,6 @@ public class Snapshot extends  javax.swing.JFrame{
     public static void main(String args[]) throws IOException, URISyntaxException {
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
         System.out.println(Core.VERSION);
-
 
         JFrame frame = new JFrame("Snapshot");
         frame.setContentPane(new Snapshot().panelMain);
